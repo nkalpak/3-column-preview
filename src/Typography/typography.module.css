@@ -1,0 +1,11 @@
+.headerStyle {
+    color: hsl(0, 0%, 95%);
+}
+
+.bodyStyle {
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 70px;
+    width: 180px;
+}

@@ -1,8 +1,18 @@
 .cardStyle {
-    width: 250px;
-    height: 400px;
+    width: 220px;
+    height: 380px;
     background-color:  hsl(31, 77%, 52%);
     padding: 30px 20px 0 30px;
-    margin: 10px;
-    border-radius: 10px;
+}
+
+.headerStyle {
+    color: white;
+}
+
+.bodyStyle {
+    color:  hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 70px;
+    width: 180px;
 }
