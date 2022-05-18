@@ -7,6 +7,7 @@
 
 .headerStyle {
     color: white;
+    font-family: 'Big Shoulders Display', cursive;
 }
 
 .bodyStyle {
@@ -15,4 +16,6 @@
     font-weight: normal;
     margin-bottom: 70px;
     width: 180px;
+    font-family: 'Lexend Deca', sans-serif;
 }
+

@@ -1,92 +1,46 @@
 import React from "react";
 import Button from "../Button/button";
 import styles from "./card.module.css";
-import Typography from "../Typography/typography";
-import sedanimage from "../Images/icon-sedans.svg";
-import suvimage from "../Images/icon-suvs.svg";
-import luxuryimage from "../Images/icon-luxury.svg";
 
-function TypographyContent(props) {
-  if (props.variant === "sedan") {
-    return (
-      <>
-        <div>
-          <img src={sedanimage} alt="sedan image" />
-          <h2 className={styles.headerStyle}>SEDANS</h2>
-          <p className={styles.bodyStyle}>
-            Choose a sedan for its affordability and excellent fuel economy.
-            Ideal for cruising in the city or on your next road trip.
-          </p>
-        </div>
-      </>
-    );
-  }
-
-  if (props.variant === "suv") {
-    return (
-      <>
-        <div>
-          <img src={suvimage} alt="suv image" />
-          <h2 className={styles.headerStyle}>SUVS</h2>
-          <p className={styles.bodyStyle}>
-            Take an SUV for its spacious interior, power, and versatility.
-            Perfect for your next family vacation and off-road adventures.
-          </p>
-        </div>
-      </>
-    );
-  }
-
-  if (props.variant === "luxury") {
-    return (
-      <>
-        <div>
-          <img src={luxuryimage} alt="luxury image" />
-          <h2 className={styles.headerStyle}>LUXURY</h2>
-          <p className={styles.bodyStyle}>
-            Cruise in the best car brands without the bloated prices. Enjoy the
-            enhanced comfort of a luxury rental and arrive in style.
-          </p>
-        </div>
-      </>
-    );
-  }
-}
-
-export default function Card({}) {
+export default function Card({
+  backgroundColor,
+  imgSource,
+  title,
+  content,
+  borderRadius,
+}) {
   return (
     <>
       <div
         className={styles.cardStyle}
         style={{
-          backgroundColor: "hsl(31, 77%, 52%)",
-          borderRadius: "10px 0 0 10px",
+          backgroundColor: backgroundColor,
+          borderRadius: borderRadius,
         }}
       >
-        <TypographyContent variant="sedan" />
-        <Button />
-      </div>
-
-      <div
-        className={styles.cardStyle}
-        style={{
-          backgroundColor: "hsl(184, 100%, 22%)",
-        }}
-      >
-        <TypographyContent variant="suv" />
-        <Button />
-      </div>
-
-      <div
-        className={styles.cardStyle}
-        style={{
-          backgroundColor: "hsl(179, 100%, 13%)",
-          borderRadius: "0 10px 10px 0",
-        }}
-      >
-        <TypographyContent variant="luxury" />
-        <Button />
+        <img src={imgSource} alt="car image" />
+        <h2 className={styles.headerStyle}>{title}</h2>
+        <p className={styles.bodyStyle}>{content}</p>
+        <Button buttonColor={ButtonColor(backgroundColor)} />
       </div>
     </>
   );
+}
+
+function ButtonColor(backgroundColor) {
+  let buttonColor;
+
+  if (backgroundColor === "hsl(31, 77%, 52%)") {
+    buttonColor = "hsl(31, 77%, 52%)";
+  }
+
+  if (backgroundColor === "hsl(184, 100%, 22%)") {
+    buttonColor = "hsl(184, 100%, 22%)";
+  }
+
+  if (backgroundColor === "hsl(179, 100%, 13%)") {
+    buttonColor = "hsl(179, 100%, 13%)";
+  }
+
+  return buttonColor;
 }
