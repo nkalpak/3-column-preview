@@ -1,7 +1,7 @@
 .cardStyle {
     width: 220px;
     height: 380px;
-    background-color:  hsl(31, 77%, 52%);
+    background-color: hsl(31, 77%, 52%);
     padding: 30px 20px 0 30px;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .bodyStyle {
-    color:  hsla(0, 0%, 100%, 0.75);
+    color: hsla(0, 0%, 100%, 0.75);
     font-size: 15px;
     font-weight: normal;
     margin-bottom: 70px;

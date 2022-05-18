@@ -1,3 +1,14 @@
+
+/*desktop*/
+@media only screen and (min-width: 1440px) {
+    .cardsStyle {flex-direction: row;}
+}
+
+/*mobile*/
+@media only screen and (max-width: 375px) {
+    .cardsStyle {flex-direction: column;}
+}
+
 .cardsStyle {
     display: flex;
     width: 50%;

@@ -8,8 +8,8 @@
 
 .buttonStyle:hover {
     border: 3px solid white;
-    color: hsl(0, 0%, 95%);
-    background-color: transparent;
+    color: hsl(0, 0%, 95%) !important;
+    background-color: transparent ;
     cursor: pointer;
 }
 
